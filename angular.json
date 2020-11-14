@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "tt-playlist"
+  "defaultProject": "tt-playlist",
+  "cli": {
+    "analytics": "41c3a219-8d00-45d7-8f88-60b998b8d3e1"
+  }
 }
