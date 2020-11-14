@@ -34,6 +34,10 @@ export class PlaylistCategoryComponent implements OnInit, OnDestroy {
     }
   }
 
+  navigateToPlaylist(url: string): void {
+    window.open(url, '_blank');
+  }
+
   ngOnDestroy(): void {
     this.playlists$.unsubscribe();
   }

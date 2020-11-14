@@ -1,5 +1,7 @@
-<h1>Playlist View</h1>
-<button routerLink="/">Home</button>
+<div class="header">
+  <h2>Categories</h2>
+  <button mat-button routerLink="/">Home</button>
+</div>
 
 <div class="categories" *ngIf="categories.length; else loading">
   <div class="category" *ngFor="let category of categories" [routerLink]="category.name" [ngStyle]="category.style">

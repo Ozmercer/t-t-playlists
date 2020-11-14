@@ -6,6 +6,7 @@ import {PlaylistViewComponent} from './playlist-view.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PlaylistCategoryComponent } from './playlist-category/playlist-category.component';
 import {PlaylistService} from './playlist.service';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {PlaylistService} from './playlist.service';
     CommonModule,
     PlaylistRoutingModule,
     HttpClientModule,
+    MatButtonModule,
   ],
   providers: [
     PlaylistService

@@ -159,11 +159,6 @@ export class PlaylistService {
         background = `${type}-gradient(${c1}, ${c2} ${range}px)`;
     }
 
-    console.log({
-      backgroundImage: background,
-      color: c3,
-    });
-
     return {
       backgroundImage: background,
       color: c3,

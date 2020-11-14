@@ -1,10 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
 .categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 240px);
+  grid-template-columns: repeat(auto-fit, 268px);
+  justify-content: center;
   grid-gap: 15px;
 
   .category {
-    height: 240px;
+    height: 268px;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;

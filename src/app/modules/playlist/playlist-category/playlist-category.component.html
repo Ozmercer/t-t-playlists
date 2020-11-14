@@ -1,11 +1,13 @@
-<p>{{category}}</p>
-<button routerLink="../">Back</button>
+<div class="header">
+  <h1>{{category}}</h1>
+  <button mat-button routerLink="../">Back</button>
+</div>
 
 <div class="playlists" *ngIf="playlists.length; else loading">
   <div class="playlist card" *ngFor="let playlist of playlists">
-    <h3>{{playlist.name}}</h3>
-    <img [src]="playlist.coverImage" alt="cover image">
-    <a [href]="playlist.link">Listen now!</a>
+    <div class="title">{{playlist.name}}</div>
+    <img [src]="playlist.coverImage" alt="cover image" (click)="navigateToPlaylist(playlist.link)">
+    <button mat-button color="accent" (click)="navigateToPlaylist(playlist.link)">Listen now!</button>
   </div>
 </div>
 

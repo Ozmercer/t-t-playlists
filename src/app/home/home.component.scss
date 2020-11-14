@@ -1,0 +1,17 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 33vh;
+
+  .welcome {
+    font-size: 48px;
+    line-height: 4rem;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 2rem;
+  }
+}
