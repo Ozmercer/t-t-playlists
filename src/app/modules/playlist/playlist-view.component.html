@@ -1,0 +1,11 @@
+<h1>Playlist View</h1>
+
+<div class="categories" *ngIf="categories.length; else loading">
+  <div class="category" *ngFor="let category of categories" [routerLink]="category">
+    {{category}}
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading">Loading...</div>
+</ng-template>
