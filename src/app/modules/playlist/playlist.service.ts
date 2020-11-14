@@ -105,7 +105,7 @@ export class PlaylistService {
         '#f7cac9',
       ],
       [
-        '#c94c4c',
+        '#8536d0',
         '#b1cbbb',
         '#deeaee',
         '#eea29a',
