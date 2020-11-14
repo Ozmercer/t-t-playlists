@@ -1,2 +1,14 @@
-<p>details works!</p>
+<p>{{category}}</p>
 <button routerLink="../">Back</button>
+
+<div class="playlists" *ngIf="playlists.length; else loading">
+  <div class="playlist card" *ngFor="let playlist of playlists">
+    <h3>{{playlist.name}}</h3>
+    <img [src]="playlist.coverImage" alt="cover image">
+    <a [href]="playlist.link">Listen now!</a>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading">Loading...</div>
+</ng-template>

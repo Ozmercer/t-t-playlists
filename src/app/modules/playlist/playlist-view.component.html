@@ -1,8 +1,9 @@
 <h1>Playlist View</h1>
+<button routerLink="/">Home</button>
 
 <div class="categories" *ngIf="categories.length; else loading">
-  <div class="category" *ngFor="let category of categories" [routerLink]="category">
-    {{category}}
+  <div class="category" *ngFor="let category of categories" [routerLink]="category.name" [ngStyle]="category.style">
+    {{category.name}}
   </div>
 </div>
 

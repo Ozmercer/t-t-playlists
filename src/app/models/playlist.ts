@@ -3,4 +3,5 @@ export interface Playlist {
   id: string;
   link: string;
   category: string;
+  name: string;
 }

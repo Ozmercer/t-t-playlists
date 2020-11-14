@@ -1,0 +1,16 @@
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  grid-gap: 15px;
+
+  .category {
+    height: 240px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

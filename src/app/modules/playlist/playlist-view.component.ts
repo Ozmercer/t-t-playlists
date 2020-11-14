@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Playlist} from '../../models/playlist';
-import {PlaylistService} from './playlist.service';
+import {CategoryStyle, PlaylistService} from './playlist.service';
 import {Subscription} from 'rxjs';
 
 @Component({
@@ -10,13 +10,15 @@ import {Subscription} from 'rxjs';
 })
 export class PlaylistViewComponent implements OnInit, OnDestroy {
   playlists: Playlist[];
-  categories: string[];
+  categories: { name: string, style: CategoryStyle }[];
   playlists$: Subscription;
   categories$: Subscription;
 
   constructor(private playlistService: PlaylistService) {
     this.playlists = [];
     this.categories = [];
+    this.playlists$ = new Subscription();
+    this.categories$ = new Subscription();
   }
 
   ngOnInit(): void {
@@ -26,11 +28,14 @@ export class PlaylistViewComponent implements OnInit, OnDestroy {
     this.categories$ = this.playlistService.categories$.subscribe(resp => {
       this.categories = resp;
     });
-    this.playlistService.fetchPlaylists();
+    if (!this.playlistService.categories.length) {
+      this.playlistService.fetchPlaylists();
+    }
   }
 
+
   ngOnDestroy(): void {
-    this?.playlists$.unsubscribe();
-    this?.categories$.unsubscribe();
+    this.playlists$.unsubscribe();
+    this.categories$.unsubscribe();
   }
 }
