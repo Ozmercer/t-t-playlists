@@ -33,7 +33,6 @@ export class PlaylistViewComponent implements OnInit, OnDestroy {
     }
   }
 
-
   ngOnDestroy(): void {
     this.playlists$.unsubscribe();
     this.categories$.unsubscribe();

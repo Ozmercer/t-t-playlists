@@ -7,7 +7,7 @@
   <div class="playlist card" *ngFor="let playlist of playlists">
     <div class="title">{{playlist.name}}</div>
     <img [src]="playlist.coverImage" alt="cover image" (click)="navigateToPlaylist(playlist.link)">
-    <button mat-button color="accent" (click)="navigateToPlaylist(playlist.link)">Listen now!</button>
+    <button class="listen" mat-button color="accent" (click)="navigateToPlaylist(playlist.link)">Listen now!</button>
   </div>
 </div>
 
