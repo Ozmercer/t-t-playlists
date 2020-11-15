@@ -12,7 +12,7 @@ category) and a detailed category view.
 Since no design was supplied for a single category, I went on a small tangent to 
 build a function that randomly generates a simple background texture.
 
-The app is built using the Angular router and a lazy-loaded module, global type 
+The app was built using the Angular router and a lazy-loaded module, global type 
 interfaces and tests.
 
 
